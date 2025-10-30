@@ -149,11 +149,11 @@ For detailed API documentation, see [backend/README.md](backend/README.md)
 ---
 ## SnapShot
 
-![Regular Products](screenshots/Screenshot (1).png)
-![Cart](screenshots/Screenshot (2).png)
-![CheckOut ](screenshots/Screenshot (3).png)
-![Order Successful](screenshots/Screenshot (4).png)
-![FakeStoreApi Products](screenshots/Screenshot (5).png)
+![Regular Products](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(1).png)
+![Cart](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(2).png)
+![CheckOut](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(3).png)
+![Order Successful](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(4).png)
+![FakeStoreApi Products](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(5).png)
 
 ---
 
