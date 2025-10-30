@@ -1,18 +1,5 @@
 import db from '../config/db.js';
 
-// const processCheckout = async (req, res) => {
-//   const { user_id, payment_method, shipping_address } = req.body;
-//   try {
-//     const newOrder = await db.query(
-//       'INSERT INTO orders (user_id, payment_method, shipping_address) VALUES ($1, $2, $3) RETURNING *',
-//       [user_id, payment_method, shipping_address]
-//     );
-//     res.status(201).json(newOrder.rows[0]);
-//   } catch (error) {
-//     res.status(500).json({ error: 'Failed to process checkout' });
-//   }
-// };
-
 const processCheckout = (req, res) => {
   const { cartItems, customerName, customerEmail } = req.body;
   const userId = req.body.userId || 'user_1';

@@ -1,14 +1,5 @@
 import db from '../config/db.js';
 
-// const getCart = async (req, res) => {
-//   try {
-//     const cartItems = await db.query('SELECT * FROM cart_items');
-//     res.status(200).json(cartItems.rows);
-//   } catch (error) {
-//     res.status(500).json({ error: 'Failed to fetch cart items' });
-//   }
-// };
-
 const getCartItems = (req, res) => {
   const userId = req.query.userId || 'user_1';
   
@@ -32,52 +23,6 @@ const getCartItems = (req, res) => {
     }
   );
 };
-
-// const addCartItem = async (req, res) => {
-//   const { product_id, quantity } = req.body;
-//   try {
-//     const newCartItem = await db.query(
-//       'INSERT INTO cart_items (product_id, quantity) VALUES ($1, $2) RETURNING *',
-//       [product_id, quantity]
-//     );
-//     res.status(201).json(newCartItem.rows[0]);
-//   } catch (error) {
-//     res.status(500).json({ error: 'Failed to add cart item' });
-//   }
-// };
-
-// const updateCartItem = async (req, res) => {
-//   const { id } = req.params;
-//   const { quantity } = req.body;
-//   try {
-//     const updatedCartItem = await db.query(
-//       'UPDATE cart_items SET quantity = $1 WHERE id = $2 RETURNING *',
-//       [quantity, id]
-//     );
-//     if (updatedCartItem.rows.length === 0) {
-//       return res.status(404).json({ error: 'Cart item not found' });
-//     }
-//     res.status(200).json(updatedCartItem.rows[0]);
-//   } catch (error) {
-//     res.status(500).json({ error: 'Failed to update cart item' });
-//   }
-// };
-
-// const deleteCartItem = async (req, res) => {
-//   const { id } = req.params;
-//   try {
-//     const deletedCartItem = await db.query(
-//       'DELETE FROM cart_items WHERE id = $1 RETURNING *',
-//       [id]
-//     );
-//     if (deletedCartItem.rows.length === 0) {
-//       return res.status(404).json({ error: 'Cart item not found' });
-//     }
-//     res.status(200).json(deletedCartItem.rows[0]);
-//   } catch (error) {
-//     res.status(500).json({ error: 'Failed to delete cart item' });
-//   }
-// };
 
 const addCartItem = (req, res) => {
   const { productId, quantity = 1 } = req.body;

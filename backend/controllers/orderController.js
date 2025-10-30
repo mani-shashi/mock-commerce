@@ -1,14 +1,5 @@
 import db from "../config/db.js";
 
-// const getOrders = async (req, res) => {
-//   try {
-//     const orders = await db.query("SELECT * FROM orders");
-//     res.status(200).json(orders.rows);
-//   } catch (error) {
-//     res.status(500).json({ error: "Failed to fetch orders" });
-//   }
-// };
-
 const createOrder = async (req, res) => {
   const { user_id, payment_method, shipping_address } = req.body;
   try {
