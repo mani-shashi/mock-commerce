@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import Header from './components/Header';
 import ProductGrid from './components/ProductGrid';
