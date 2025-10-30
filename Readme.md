@@ -51,6 +51,7 @@ mock-commerce/
 │   ├── tailwind.config.js
 │   └── package.json
 │
+├── package.json
 └── README.md               # This file
 ```
 
@@ -150,13 +151,9 @@ For detailed API documentation, see [backend/README.md](backend/README.md)
 ## SnapShot
 
 ![Regular Products](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(1).png)
-<br>
 ![Cart](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(2).png)
-<br>
 ![CheckOut](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(3).png)
-<br>
 ![Order Successful](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(4).png)
-<br>
 ![FakeStoreApi Products](https://github.com/mani-shashi/mock-commerce/blob/main/screenshots/Screenshot%20(5).png)
 
 ---
