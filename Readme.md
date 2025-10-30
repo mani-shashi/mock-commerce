@@ -115,6 +115,7 @@ The backend API will be available at:
 http://localhost:3001/api
 ```
 
+
 you can also setup site in a single go, run following command
 
 ```bash
@@ -124,6 +125,8 @@ npm run start
 ```
 
 Site will run on `http://localhost:3000`
+
+
 
 ## 📚 API Documentation
 
