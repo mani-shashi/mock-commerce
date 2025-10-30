@@ -1,283 +1,242 @@
-# Mock Commerce - Full-Stack Shopping Cart
+# Mock Commerce - Full-Stack Shopping Cart Application
 
-A complete e-commerce shopping cart application with React frontend, Express backend, and SQLite database.
+A modern, full-stack e-commerce shopping cart application built with React, Node.js/Express, and SQLite. This project demonstrates complete CRUD operations, RESTful API design, and responsive UI/UX for e-commerce flows.
 
-## Features
+![Mock Commerce](https://img.shields.io/badge/React-18+-61DAFB?style=flat&logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-16+-339933?style=flat&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4+-000000?style=flat&logo=express&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=flat&logo=sqlite&logoColor=white)
 
-### Backend (Express + SQLite)
-- ✅ GET `/api/products` - Returns 8 mock products
-- ✅ POST `/api/cart` - Add items to cart with quantity
-- ✅ DELETE `/api/cart/:id` - Remove items from cart
-- ✅ PUT `/api/cart/:id` - Update item quantities
-- ✅ GET `/api/cart` - Get cart items with calculated total
-- ✅ POST `/api/checkout` - Process checkout with customer info
-- ✅ GET `/api/orders` - Order history (bonus feature)
-- ✅ SQLite database with persistent storage
-- ✅ Comprehensive error handling
-- ✅ CORS enabled for frontend communication
+## 🚀 Features
 
-### Frontend (React)
-- ✅ Responsive product grid with 8 items
-- ✅ Add to cart functionality
-- ✅ Shopping cart sidebar with item management
-- ✅ Quantity controls (increment/decrement)
+### Core Functionality
+- ✅ Browse products with detailed information
+- ✅ Add items to cart with quantity management
+- ✅ Update cart quantities (increment/decrement)
 - ✅ Remove items from cart
-- ✅ Live cart total calculation
-- ✅ Checkout modal with customer form
-- ✅ Order confirmation receipt
-- ✅ Beautiful gradient UI design
-- ✅ Error handling with toast notifications
-- ✅ Loading states
+- ✅ Real-time cart total calculation
+- ✅ Customer checkout with form validation
+- ✅ Order confirmation with receipt
+- ✅ Responsive design for all devices
 
-## Tech Stack
+### Technical Highlights
+- **Backend**: RESTful API with Express.js
+- **Database**: SQLite with proper schema and relationships
+- **Frontend**: React with hooks and modular component architecture
+- **Styling**: Tailwind CSS with modern gradient design
+- **State Management**: Custom hooks for data management
+- **Error Handling**: Comprehensive error handling on both ends
+- **Modular Architecture**: Clean separation of concerns
 
-**Backend:**
-- Node.js + Express.js
-- SQLite3 database
-- RESTful API architecture
-- CORS middleware
+## 📁 Project Structure
 
-**Frontend:**
-- React 18+ with Hooks
-- Tailwind CSS for styling
-- Lucide React icons
-- Fetch API for HTTP requests
+```
+mock-commerce/
+├── backend/                 # Node.js/Express backend
+│   ├── config/             # Database configuration
+│   ├── controllers/        # Route controllers
+│   ├── middleware/         # Error handling middleware
+│   ├── routes/             # API routes
+│   ├── server.js           # Main server file
+│   └── package.json
+│
+├── frontend/               # React frontend
+│   ├── src/
+│   │   ├── components/     # Reusable UI components
+│   │   ├── hooks/          # Custom React hooks
+│   │   ├── services/       # API service layer
+│   │   ├── App.js          # Main App component
+│   │   └── index.js        # Entry point
+│   ├── public/
+│   ├── tailwind.config.js
+│   └── package.json
+│
+└── README.md               # This file
+```
 
-## Installation & Setup
+## 🛠️ Tech Stack
+
+### Backend
+- **Runtime**: Node.js 16+
+- **Framework**: Express.js 4.18+
+- **Database**: SQLite3
+- **Middleware**: CORS, express.json()
+
+### Frontend
+- **Framework**: React 18+
+- **Styling**: Tailwind CSS 3+
+- **Icons**: Lucide React
+- **HTTP Client**: Fetch API
+- **Build Tool**: Create React App
+
+## ⚡ Quick Start
 
 ### Prerequisites
-- Node.js 16+ installed
+- Node.js 16 or higher
 - npm or yarn package manager
+- Git
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/mani-shashi/mock-commerce.git
+cd mock-commerce
+```
 
 ### Backend Setup
 
-1. Create a new directory for the backend:
 ```bash
-git clone https://github.com/mani-shashi/MockCommerce.git
-```
-
-2. Initialize npm and install dependencies:
-```bash
-npm init -y
-npm install express cors sqlite3
-npm install --save-dev nodemon
-```
-
-3. Create `server.js` file with the backend code provided
-
-4. Update `package.json` scripts:
-```json
-"scripts": {
-  "start": "node server.js",
-  "dev": "nodemon server.js"
-}
-```
-
-5. Start the backend server:
-```bash
-npm run dev
-```
-
-Server will run on `http://localhost:3001`
-
-### Frontend Setup
-
-1. Create a new React app:
-```bash
-npx create-react-app vibe-commerce-frontend
-cd vibe-commerce-frontend
-```
-
-2. Install Tailwind CSS:
-```bash
-npm install -D tailwindcss
-npx tailwindcss init
-```
-
-3. Configure Tailwind in `tailwind.config.js`:
-```js
-module.exports = {
-  content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
-```
-
-4. Add Tailwind directives to `src/index.css`:
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-
-5. Install lucide-react for icons:
-```bash
-npm install lucide-react
-```
-
-6. Replace `src/App.js` with the frontend React component code
-
-7. Start the frontend:
-```bash
+cd backend
+npm install
 npm start
 ```
 
-App will run on `http://localhost:3000`
+Backend will run on `http://localhost:3001`
 
-## API Endpoints
+### Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm start
+```
+
+Frontend will run on `http://localhost:3000`
+
+### Access the Application
+
+Open your browser and navigate to:
+```
+http://localhost:3000
+```
+
+The backend API will be available at:
+```
+http://localhost:3001/api
+```
+
+## 📚 API Documentation
 
 ### Products
-- **GET** `/api/products`
-  - Returns all available products
-  - Response: `{ products: [...] }`
+- `GET /api/products` - Get all products
 
 ### Cart
-- **GET** `/api/cart?userId=user_1`
-  - Get cart items with total
-  - Response: `{ cartItems: [...], total: 123.45 }`
-
-- **POST** `/api/cart`
-  - Add item to cart
-  - Body: `{ productId: 1, quantity: 2 }`
-  - Response: `{ message: "Item added", cartId: 1 }`
-
-- **PUT** `/api/cart/:id`
-  - Update item quantity
-  - Body: `{ quantity: 3 }`
-  - Response: `{ message: "Cart updated", quantity: 3 }`
-
-- **DELETE** `/api/cart/:id`
-  - Remove item from cart
-  - Response: `{ message: "Item removed" }`
+- `GET /api/cart` - Get cart items with total
+- `POST /api/cart` - Add item to cart
+- `PUT /api/cart/:id` - Update cart item quantity
+- `DELETE /api/cart/:id` - Remove item from cart
 
 ### Checkout
-- **POST** `/api/checkout`
-  - Process order
-  - Body: `{ cartItems: [...], customerName: "John", customerEmail: "john@example.com" }`
-  - Response: `{ orderId, total, timestamp, items, message }`
+- `POST /api/checkout` - Process checkout and create order
+- `GET /api/orders` - Get order history (bonus)
 
-### Orders (Bonus)
-- **GET** `/api/orders?userId=user_1`
-  - Get order history
-  - Response: `{ orders: [...] }`
+For detailed API documentation, see [backend/README.md](backend/README.md)
 
-## Database Schema
+## 🧪 Testing the Application
 
-### Products Table
-```sql
-CREATE TABLE products (
-  id INTEGER PRIMARY KEY,
-  name TEXT NOT NULL,
-  price REAL NOT NULL,
-  image TEXT,
-  description TEXT
-)
+1. **View Products**: Browse the product grid on the homepage
+2. **Add to Cart**: Click "Add to Cart" on any product
+3. **Manage Cart**: Click the cart icon to view and manage items
+4. **Update Quantities**: Use +/- buttons to adjust quantities
+5. **Remove Items**: Click the X button to remove items
+6. **Checkout**: Click "Proceed to Checkout"
+7. **Complete Order**: Fill in name and email, submit order
+8. **View Receipt**: See order confirmation with details
+
+## 📦 Available Scripts
+
+### Backend
+```bash
+npm start       # Start the server
+npm run dev     # Start with nodemon (development)
 ```
 
-### Cart Table
-```sql
-CREATE TABLE cart (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  productId INTEGER NOT NULL,
-  quantity INTEGER NOT NULL,
-  userId TEXT DEFAULT 'user_1',
-  FOREIGN KEY (productId) REFERENCES products(id)
-)
+### Frontend
+```bash
+npm start       # Start development server
+npm run build   # Build for production
+npm test        # Run tests
 ```
 
-### Orders Table
-```sql
-CREATE TABLE orders (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  userId TEXT NOT NULL,
-  customerName TEXT NOT NULL,
-  customerEmail TEXT NOT NULL,
-  total REAL NOT NULL,
-  timestamp TEXT NOT NULL,
-  items TEXT NOT NULL
-)
-```
+## 🔧 Configuration
 
-## Features Implemented
+### Backend Configuration
+- **Port**: Default `3001` (configurable via `PORT` environment variable)
+- **Database**: In-memory SQLite (change in `config/database.js` for persistence)
+- **CORS**: Enabled for all origins (restrict in production)
 
-### Core Requirements
-- ✅ 8 mock products with images, names, prices, descriptions
-- ✅ Add to cart with quantity management
-- ✅ Remove items from cart
-- ✅ Update quantities (increment/decrement)
-- ✅ Real-time total calculation
-- ✅ Checkout form with name and email
-- ✅ Order confirmation receipt with all details
-- ✅ Fully responsive design
-- ✅ Clean, modern UI with gradients
+### Frontend Configuration
+- **API Base URL**: `http://localhost:3001/api` (configurable in `services/api.js`)
+- **Port**: Default `3000`
+
+## 🌟 Features Breakdown
+
+### Implemented Requirements
+- ✅ GET /api/products - Returns 8 mock products
+- ✅ POST /api/cart - Add items with quantity
+- ✅ DELETE /api/cart/:id - Remove items
+- ✅ GET /api/cart - Get cart with total
+- ✅ POST /api/checkout - Process checkout with customer info
+- ✅ Product grid with "Add to Cart"
+- ✅ Cart view with quantity controls
+- ✅ Checkout form with validation
+- ✅ Receipt modal with order details
+- ✅ Responsive design
 
 ### Bonus Features
 - ✅ SQLite database persistence
 - ✅ Order history tracking
-- ✅ Error handling with user-friendly messages
+- ✅ Modular component architecture
+- ✅ Custom React hooks
+- ✅ Error handling with toast notifications
 - ✅ Loading states
+- ✅ Modern gradient UI design
 - ✅ Cart badge with item count
-- ✅ Smooth animations and transitions
-- ✅ Product images from Unsplash
-- ✅ Update cart quantities directly
-- ✅ Empty cart state handling
 
-## Testing the Application
+## 🚧 Development
 
-1. **View Products**: Homepage displays 8 products in a grid
-2. **Add to Cart**: Click "Add to Cart" on any product
-3. **Open Cart**: Click cart icon in header to view cart sidebar
-4. **Manage Quantities**: Use +/- buttons to adjust quantities
-5. **Remove Items**: Click X button to remove items
-6. **Checkout**: Click "Proceed to Checkout" when ready
-7. **Complete Order**: Fill in name and email, click "Place Order"
-8. **View Receipt**: See order confirmation with order ID and details
+### Adding New Products
+Edit `backend/config/seedData.js` and add products to the array.
 
-## Project Structure
+### Changing Database
+Modify `backend/config/database.js`:
+```javascript
+// From in-memory
+const db = new sqlite3.Database(':memory:');
 
-```
-Mock-commerce/
-├── backend/
-│   ├── server.js
-│   ├── package.json
-│   └── node_modules/
-└── frontend/
-    ├── src/
-    │   ├── services/
-    │       ├── api.js
-    │   ├── App.js
-    │   ├── index.css
-    │   └── index.js
-    ├── package.json
-    ├── tailwind.config.js
-    └── node_modules/
+// To file-based
+const db = new sqlite3.Database('./database.db');
 ```
 
-## Notes
 
-- Database is in-memory (`:memory:`) for demo purposes. For production, use a file-based database: `new sqlite3.Database('./database.db')`
-- Mock user ID `user_1` is used. In production, implement proper authentication
-- No payment processing - this is a mock checkout flow
-- Images are from Unsplash CDN
-- CORS is enabled for all origins (restrict in production)
+## 🎯 Future Enhancements
 
-## Future Enhancements
+- [ ] User authentication & authorization
+- [ ] Real payment gateway integration (Stripe/PayPal)
+- [ ] Product search & filtering
+- [ ] Product categories
+- [ ] Wishlist functionality
+- [ ] Order tracking
+- [ ] Admin dashboard
+- [ ] Email notifications
+- [ ] Inventory management
+- [ ] Product reviews & ratings
+- [ ] Multi-currency support
 
-- User authentication & sessions
-- Real payment gateway integration (Stripe, PayPal)
-- Product search & filtering
-- Product categories
-- Wishlist functionality
-- Order tracking
-- Admin dashboard
-- Email notifications
-- Inventory management
-- Product reviews & ratings
+## 📸 Screenshots
+
+### Homepage
+Modern product grid with gradient design and hover effects.
+
+### Shopping Cart
+Slide-out cart sidebar with quantity controls and live total calculation.
+
+### Checkout
+Clean checkout form with order summary.
+
+### Order Confirmation
+Beautiful receipt modal with order details.
 
 ---
 
-**Built with ❤️ by @mani-shashi**
+Built with ❤️ for Vibe Commerce screening

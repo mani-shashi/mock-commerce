@@ -103,7 +103,7 @@ const products = [
     id: 15,
     name: 'E-Reader',
     price: 1299,
-    image: 'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400',
+    image: 'https://images.unsplash.com/photo-1676107779674-f77343861e81?w=400',
     description: '6-inch glare-free e-reader'
   }
 ];

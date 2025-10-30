@@ -5,7 +5,7 @@ import loadInitialData from './config/loadData.js';
 import routes from './routes/index.js';
 
 const app = express();
-const PORT = process.env.PORT || 5003;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
