@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import fakeStoreCartApi from '../services/fakeStoreCartApi';
 import fakeStoreApiService from '../services/fakeStoreApi';
 
@@ -8,11 +8,11 @@ const useFakeStoreCart = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const calculateTotal = (items) => {
+  const calculateTotal = useCallback((items) => {
     return items.reduce((total, item) => total + (item.price * item.quantity), 0);
-  };
+  }, []);
 
-  const fetchCartWithProducts = async () => {
+  const fetchCartWithProducts = useCallback(async () => {
     setLoading(true);
     try {
       const cartData = await fakeStoreCartApi.getCart();
@@ -121,7 +121,7 @@ const useFakeStoreCart = () => {
 
   useEffect(() => {
     fetchCartWithProducts();
-  }, []);
+  }, [fetchCartWithProducts]);
 
   return {
     cart,

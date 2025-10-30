@@ -23,8 +23,7 @@ function App() {
     addToCart: regularAddToCart, 
     updateQuantity: regularUpdateQuantity, 
     removeFromCart: regularRemoveFromCart, 
-    refreshCart: regularRefreshCart,
-    checkout: regularCheckout 
+    refreshCart: regularRefreshCart
   } = useCart();
   const {
     cart: fakeStoreCart,
