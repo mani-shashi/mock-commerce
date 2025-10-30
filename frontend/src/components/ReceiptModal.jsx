@@ -31,7 +31,7 @@ const ReceiptModal = ({ isOpen, receipt, onClose }) => {
           <div className="flex justify-between">
             <span className="text-gray-600">Date:</span>
             <span className="font-semibold text-sm">
-              {new Date(receipt.timestamp).toLocaleDateString()}
+              {new Date(receipt.timestamp || receipt.orderDate).toLocaleDateString()}
             </span>
           </div>
           <div className="border-t pt-3 flex justify-between text-lg">
@@ -44,7 +44,7 @@ const ReceiptModal = ({ isOpen, receipt, onClose }) => {
           <h3 className="font-semibold text-gray-800 mb-2">Order Items:</h3>
           {receipt.items.map(item => (
             <div key={item.id} className="flex justify-between text-sm">
-              <span className="text-cyan-600">{item.name} x{item.quantity}</span>
+              <span className="text-cyan-600">{item.name || item.title} x{item.quantity}</span>
               <span>₹{(item.price * item.quantity).toFixed(2)}</span>
             </div>
           ))}
