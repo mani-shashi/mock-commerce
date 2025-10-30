@@ -119,9 +119,10 @@ http://localhost:3001/api
 you can also setup site in a single go, run following command
 
 ```bash
+git clone https://github.com/mani-shashi/mock-commerce.git
 cd mock-commerce
 npm install
-npm run start
+npm start
 ```
 
 Site will run on `http://localhost:3000`
