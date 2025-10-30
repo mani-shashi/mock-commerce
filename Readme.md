@@ -146,6 +146,14 @@ Site will run on `http://localhost:3000`
 
 For detailed API documentation, see [backend/README.md](backend/README.md)
 
+---
+## SnapShot
+
+![Regular Products](screenshots/Screenshot (1).png)
+![Cart](screenshots/Screenshot (2).png)
+![CheckOut ](screenshots/Screenshot (3).png)
+![Order Successful](screenshots/Screenshot (4).png)
+![FakeStoreApi Products](screenshots/Screenshot (5).png)
 
 ---
 
